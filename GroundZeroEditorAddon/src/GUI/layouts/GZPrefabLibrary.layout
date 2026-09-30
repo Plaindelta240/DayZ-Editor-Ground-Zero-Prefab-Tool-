@@ -1,0 +1,750 @@
+PanelWidgetClass GZPrefabLibrary {
+ visible 1
+ clipchildren 1
+ ignorepointer 0
+ color 0.141 0.157 0.18 1
+ position 24 60
+ size 720 556
+ hexactpos 1
+ vexactpos 1
+ hexactsize 1
+ vexactsize 1
+ priority 998
+ scriptclass ""
+ style rover_sim_colorable
+ {
+  FrameWidgetClass WindowDragWrapper {
+   visible 1
+   ignorepointer 0
+   color 1 1 1 0.392
+   size 1 26
+   hexactpos 1
+   vexactpos 1
+   hexactsize 0
+   vexactsize 1
+   draggable 1
+   scriptclass ""
+   {
+    PanelWidgetClass TitleBar {
+     ignorepointer 1
+     color 0 0.478 0.8 1
+     size 1 25
+     halign center_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 0
+     vexactsize 1
+     priority 255
+     draggable 0
+     style rover_sim_colorable
+     {
+      ImageWidgetClass TitleIcon {
+       visible 1
+       ignorepointer 1
+       color 0.682 0.718 0.702 1
+       position 5 0
+       size 18 18
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       scriptclass "SymbolHandler"
+       image0 ""
+       mode blend
+       "src alpha" 1
+       "clamp mode" clamp
+       "stretch mode" stretch_w_h
+       filter 1
+       {
+        ScriptParamsClass {
+         Symbol_Name "cubes"
+         Symbol_Size 3
+        }
+       }
+      }
+      TextWidgetClass TitleText {
+       clipchildren 1
+       ignorepointer 1
+       position 0 0
+       size 673 22
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       scaled 0
+       scriptclass ""
+       text "Ground Zero Prefab Library"
+       font "gui/fonts/Metron"
+       "italic text" 0
+       "bold text" 0
+       "text sharpness" 0.9
+       "exact text" 0
+       "size to text h" 1
+       "size to text v" 1
+       "text halign" center
+       "text valign" center
+      }
+      PanelWidgetClass TitleClosePanel {
+       ignorepointer 1
+       color 0.784 0.294 0.275 1
+       position 2 2
+       size 21 21
+       halign right_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       style rover_sim_colorable
+       {
+        ButtonWidgetClass TitleClose {
+         visible 1
+         ignorepointer 0
+         color 0.667 0.667 0.667 1
+         position 0 0
+         size 1 1
+         halign center_ref
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 0
+         vexactsize 0
+         priority 5
+         style Default
+         "no focus" 1
+         text "X"
+         font "gui/fonts/Metron-Bold"
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+  PanelWidgetClass Toolbar {
+   ignorepointer 1
+   color 0.172 0.192 0.212 1
+   position 0 26
+   size 1 44
+   hexactpos 1
+   vexactpos 1
+   hexactsize 0
+   vexactsize 1
+   style rover_sim_colorable
+   {
+    ButtonWidgetClass UpButton {
+     position 8 6
+     size 32 32
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     {
+      ImageWidgetClass UpButtonImage {
+       ignorepointer 1
+       size 18 18
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       scaled 0
+       scriptclass "SymbolHandler"
+       mode blend
+       "src alpha" 1
+       filter 1
+       {
+        ScriptParamsClass {
+         Symbol_Name "arrow_up"
+         Symbol_Size 2
+        }
+       }
+      }
+     }
+    }
+    ButtonWidgetClass NewFolderButton {
+     position 44 6
+     size 32 32
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     {
+      ImageWidgetClass NewFolderButtonImage {
+       ignorepointer 1
+       size 18 18
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       scaled 0
+       scriptclass "SymbolHandler"
+       mode blend
+       "src alpha" 1
+       filter 1
+       {
+        ScriptParamsClass {
+         Symbol_Name "folder_plus"
+         Symbol_Size 2
+        }
+       }
+      }
+     }
+    }
+    ButtonWidgetClass RefreshButton {
+     position 80 6
+     size 32 32
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     {
+      ImageWidgetClass RefreshButtonImage {
+       ignorepointer 1
+       size 18 18
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       scaled 0
+       scriptclass "SymbolHandler"
+       mode blend
+       "src alpha" 1
+       filter 1
+       {
+        ScriptParamsClass {
+         Symbol_Name "arrow_rotate_right"
+         Symbol_Size 2
+        }
+       }
+      }
+     }
+    }
+    TextWidgetClass PathText {
+     ignorepointer 1
+     position 124 6
+     size 340 32
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     text "Prefabs"
+     font "gui/fonts/Metron16"
+     "exact text" 0
+     "text valign" center
+    }
+    PanelWidgetClass SearchWrapper {
+     ignorepointer 1
+     position 8 6
+     size 230 32
+     halign right_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     style Outline_1px
+     {
+      EditBoxWidgetClass SearchBox {
+       size 1 1
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 0
+       scaled 1
+       text "Search..."
+       "exact text" 1
+       font "gui/fonts/Metron16"
+      }
+     }
+    }
+   }
+  }
+  PanelWidgetClass TreeHeader {
+   ignorepointer 1
+   color 0.228 0.247 0.263 1
+   position 8 76
+   size 190 22
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   style rover_sim_colorable
+   {
+    TextWidgetClass TreeHeaderText {
+     ignorepointer 1
+     size 1 1
+     hexactpos 1
+     vexactpos 1
+     hexactsize 0
+     vexactsize 0
+     text "Folders"
+     font "gui/fonts/Metron16"
+     "text offset" 10 0
+     "text valign" center
+    }
+   }
+  }
+  ScrollWidgetClass TreeScroller {
+   ignorepointer 0
+   position 8 100
+   size 190 300
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   "Scrollbar V" 1
+   {
+    WrapSpacerWidgetClass TreeContent {
+     ignorepointer 1
+     size 1 48
+     hexactpos 1
+     vexactpos 1
+     hexactsize 0
+     vexactsize 1
+     scriptclass "ViewBinding"
+     Padding 0
+     Margin 0
+     "Size To Content V" 1
+     {
+      ScriptParamsClass {
+       Binding_Name "Tree"
+      }
+     }
+    }
+   }
+  }
+  PanelWidgetClass Divider {
+   ignorepointer 1
+   color 0.565 0.565 0.565 1
+   position 202 76
+   size 2 324
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   style rover_sim_colorable
+  }
+  PanelWidgetClass ItemsHeader {
+   ignorepointer 1
+   color 0.228 0.247 0.263 1
+   position 208 76
+   size 504 22
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   style rover_sim_colorable
+   {
+    TextWidgetClass ItemsHeaderText {
+     ignorepointer 1
+     size 1 1
+     hexactpos 1
+     vexactpos 1
+     hexactsize 0
+     vexactsize 0
+     text "Name"
+     font "gui/fonts/Metron16"
+     "text offset" 40 0
+     "text valign" center
+    }
+   }
+  }
+  ScrollWidgetClass ItemsScroller {
+   ignorepointer 0
+   position 208 100
+   size 504 300
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   "Scrollbar V" 1
+   {
+    WrapSpacerWidgetClass ItemsContent {
+     ignorepointer 1
+     size 1 48
+     hexactpos 1
+     vexactpos 1
+     hexactsize 0
+     vexactsize 1
+     scriptclass "ViewBinding"
+     Padding 0
+     Margin 0
+     "Size To Content V" 1
+     {
+      ScriptParamsClass {
+       Binding_Name "Items"
+      }
+     }
+    }
+   }
+  }
+  TextWidgetClass EmptyText {
+   visible 0
+   ignorepointer 1
+   color 0.682 0.718 0.702 1
+   position 208 100
+   size 504 300
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   text "Nothing here yet. Select objects in the world, name the prefab below and press Save Prefab."
+   font "gui/fonts/Metron16"
+   "exact text" 0
+   "text halign" center
+   "text valign" center
+  }
+  PanelWidgetClass DetailsPanel {
+   ignorepointer 1
+   color 0.172 0.192 0.212 1
+   position 8 404
+   size 704 50
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   style rover_sim_colorable
+   {
+    TextWidgetClass DetailsTitle {
+     ignorepointer 1
+     position 10 4
+     size 684 22
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     text ""
+     font "gui/fonts/Metron16"
+     "exact text" 0
+     "text valign" center
+    }
+    TextWidgetClass DetailsText {
+     ignorepointer 1
+     color 0.682 0.718 0.702 1
+     position 10 26
+     size 684 20
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     text ""
+     font "gui/fonts/MetronBook16"
+     "exact text" 0
+     "text valign" center
+    }
+   }
+  }
+  PanelWidgetClass SavePanel {
+   ignorepointer 1
+   color 0.228 0.247 0.263 1
+   position 8 458
+   size 704 44
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   style rover_sim_colorable
+   {
+    TextWidgetClass SaveLabel {
+     ignorepointer 1
+     position 10 0
+     size 130 44
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     text "Save selection as:"
+     font "gui/fonts/Metron16"
+     "exact text" 0
+     "text valign" center
+    }
+    PanelWidgetClass NameWrapper {
+     ignorepointer 1
+     position 144 8
+     size 290 28
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     style Outline_1px
+     {
+      EditBoxWidgetClass PrefabNameBox {
+       size 1 1
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 0
+       scaled 1
+       text "New Prefab"
+       "exact text" 1
+       font "gui/fonts/Metron16"
+      }
+     }
+    }
+    PanelWidgetClass SavePrefabWrapper {
+     ignorepointer 1
+     position 442 8
+     size 120 28
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     style Outline_1px
+     {
+      ButtonWidgetClass SavePrefabButton {
+       size 1 1
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 0
+       text "Save Prefab"
+       font "gui/fonts/MetronBook16"
+      }
+     }
+    }
+    TextWidgetClass SelectionText {
+     ignorepointer 1
+     color 0.682 0.718 0.702 1
+     position 572 0
+     size 126 44
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     text "0 selected"
+     font "gui/fonts/Metron16"
+     "exact text" 0
+     "text valign" center
+    }
+   }
+  }
+  PanelWidgetClass PlaceWrapper {
+   ignorepointer 1
+   position 8 512
+   size 110 32
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   style Outline_1px
+   {
+    ButtonWidgetClass PlaceButton {
+     size 1 1
+     halign center_ref
+     valign center_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 0
+     vexactsize 0
+     text "Place"
+     font "gui/fonts/MetronBook16"
+    }
+   }
+  }
+  PanelWidgetClass RenameWrapper {
+   ignorepointer 1
+   position 124 512
+   size 110 32
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   style Outline_1px
+   {
+    ButtonWidgetClass RenameButton {
+     size 1 1
+     halign center_ref
+     valign center_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 0
+     vexactsize 0
+     text "Rename"
+     font "gui/fonts/MetronBook16"
+    }
+   }
+  }
+  PanelWidgetClass MoveWrapper {
+   ignorepointer 1
+   position 240 512
+   size 110 32
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   style Outline_1px
+   {
+    ButtonWidgetClass MoveButton {
+     size 1 1
+     halign center_ref
+     valign center_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 0
+     vexactsize 0
+     text "Move To..."
+     font "gui/fonts/MetronBook16"
+    }
+   }
+  }
+  PanelWidgetClass DeleteWrapper {
+   ignorepointer 1
+   position 356 512
+   size 110 32
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   style Outline_1px
+   {
+    ButtonWidgetClass DeleteButton {
+     size 1 1
+     halign center_ref
+     valign center_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 0
+     vexactsize 0
+     text "Delete"
+     font "gui/fonts/MetronBook16"
+    }
+   }
+  }
+  TextWidgetClass HintText {
+   ignorepointer 1
+   color 0.682 0.718 0.702 1
+   position 476 512
+   size 236 32
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   text "Drag a prefab into the world"
+   font "gui/fonts/MetronBook16"
+   "exact text" 0
+   "text halign" right
+   "text valign" center
+  }
+  PanelWidgetClass PromptPanel {
+   visible 0
+   ignorepointer 0
+   color 0.172 0.192 0.212 1
+   position 210 170
+   size 500 124
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   priority 1000
+   style rover_sim_colorable
+   {
+    PanelWidgetClass PromptOutline {
+     ignorepointer 1
+     size 1 1
+     hexactpos 1
+     vexactpos 1
+     hexactsize 0
+     vexactsize 0
+     style Outline_1px
+    }
+    TextWidgetClass PromptLabel {
+     ignorepointer 1
+     position 12 8
+     size 476 24
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     text "Name:"
+     font "gui/fonts/Metron16"
+     "exact text" 0
+     "text valign" center
+    }
+    PanelWidgetClass PromptBoxWrapper {
+     ignorepointer 1
+     position 12 40
+     size 476 30
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     style Outline_1px
+     {
+      EditBoxWidgetClass PromptBox {
+       size 1 1
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 0
+       scaled 1
+       text ""
+       "exact text" 1
+       font "gui/fonts/Metron16"
+      }
+     }
+    }
+    PanelWidgetClass PromptOKWrapper {
+     ignorepointer 1
+     position 284 82
+     size 96 30
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     style Outline_1px
+     {
+      ButtonWidgetClass PromptOK {
+       size 1 1
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 0
+       text "OK"
+       font "gui/fonts/MetronBook16"
+      }
+     }
+    }
+    PanelWidgetClass PromptCancelWrapper {
+     ignorepointer 1
+     position 392 82
+     size 96 30
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     style Outline_1px
+     {
+      ButtonWidgetClass PromptCancel {
+       size 1 1
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 0
+       text "Cancel"
+       font "gui/fonts/MetronBook16"
+      }
+     }
+    }
+   }
+  }
+ }
+}

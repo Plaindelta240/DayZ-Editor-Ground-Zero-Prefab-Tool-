@@ -1,0 +1,10 @@
+name = "Ground Zero DayZ Editor Addon";
+picture = "";
+logo = "";
+logoSmall = "";
+logoOver = "";
+tooltip = "Ground Zero DayZ Editor Addon";
+overview = "Prefab library for the DayZ Editor: save any selection as a prefab, organise prefabs in folders and drag them back into the world with every object in exactly the same relative position.";
+author = "Ground Zero";
+version = "1.0";
+action = "";
